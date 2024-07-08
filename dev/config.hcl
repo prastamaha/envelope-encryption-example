@@ -9,6 +9,6 @@ listener "tcp" {
 }
 
 default_lease_ttl = "168h"
-max_lease_ttl     = "0"
+max_lease_ttl     = "720h"
 api_addr          = "https://0.0.0.0:8200"
 ui                = 1
