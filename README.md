@@ -63,9 +63,9 @@
 
     actually we can use curl or postman to access the server, but to make the demo easier, I made an http client to create a dummy user and query the user with the username
 
-    ![alt text](./img/image.png)
+    ![alt text](./img/client.png)
 
 6. Check the database record and make sure the column is encrypted
 
-    ![alt text](image.png)
+    ![alt text](./img/database.png)
 
