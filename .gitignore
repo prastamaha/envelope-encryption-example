@@ -1,0 +1,5 @@
+.env
+keyset.json
+dev/vault-cert.pem
+dev/vault-key.pem
+dev/vault_init_keys.txt

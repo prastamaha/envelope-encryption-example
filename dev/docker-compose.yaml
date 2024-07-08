@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    volumes:
+    - ./migration.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+      POSTGRES_DB: myapp
+    ports:
+    - 5432:5432
+  vault:
+    image: hashicorp/vault:latest
+    container_name: vault
+    ports:
+      - "8200:8200"
+    volumes:
+      - ./config.hcl:/vault/config/config.hcl:ro
+      - ./vault-cert.pem:/vault/config/vault-cert.pem:ro
+      - ./vault-key.pem:/vault/config/vault-key.pem:ro
+    cap_add:
+      - IPC_LOCK
+    command: server
+    environment:
+      - TZ=Asia/Jakarta
+      - VAULT_ADDR=https://localhost:8200
+      - VAULT_SKIP_VERIFY=true
