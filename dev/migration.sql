@@ -1,11 +1,10 @@
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(25) UNIQUE,
-    encrypted_name BYTEA NOT NULL,
-    encrypted_gender BYTEA NOT NULL,
-    encrypted_phone BYTEA NOT NULL,
-    encrypted_address BYTEA NOT NULL,
-    encrypted_dek BYTEA NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    phone VARCHAR(25) NOT NULL,
+    address VARCHAR(255) NOT NULL,
     consented BOOLEAN NOT NULL DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
