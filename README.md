@@ -69,3 +69,14 @@
 
     ![alt text](./img/database.png)
 
+## Performance Testing
+
+Performance comparison between servers that use envelope encryption and those that don't.
+
+### Using Envelope Encryption
+
+![alt text](./img/k6-encrypt-result.png)
+
+### Does't Use Envelope Encryption
+
+![alt text](./img/k6-plain-result.png)
